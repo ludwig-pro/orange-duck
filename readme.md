@@ -93,10 +93,11 @@ npx react-native run-android
 
 # The Exercises
 
-Your contact at Stadion will let you know which of the following exercises to do as part of your code test.
+Please complete the following exercises.
 
-- [Display the fixtures list in the fixtures screen](./exercise-fixtures.md)
 - [Display news content in the home screen](./exercise-news.md)
+- [Display the fixtures list in the fixtures screen](./exercise-fixtures.md)
+
 
 # How to deliver your work back to us
 
