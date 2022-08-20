@@ -18,6 +18,11 @@ However, after being promoted to Center Midfield in the Stadion FC team, the dev
 - The client has requested infinite scrolling (i.e as the user scrolls towards the end of the screen, more article content is dynamically loaded).
 - It's up to you to determine the appropriate number of items to return each time 
 
+**Technical constraints:**
+
+- Please don't use a UI library such as React Native Paper. We'd like to see you roll your own components.
+  - Though frameworks such as Styled Components are fine to use.
+
 ## Task List
 
 - [ ] **Setup state management** for the content loaded from the API
