@@ -20,7 +20,7 @@ However, after being promoted to Center Midfield in the Stadion FC team, the dev
 
 **Technical constraints:**
 
-- Please don't use a UI library such as React Native Paper. We'd like to see you roll your own components.
+- Please don't use a UI library such as React Native Elements. We'd like to see you roll your own components.
   - Though frameworks such as Styled Components are fine to use.
 
 ## Task List
