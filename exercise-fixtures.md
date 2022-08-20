@@ -14,6 +14,11 @@ However, after being promoted to Center Midfield in the Stadion FC team, the dev
   - A boolean called `fixturesLoading`, which indicates whether the API request to fetch the fixtures is currently in progress.
   - An array of `Fixture` objects called `fixtures`, which contains all the data that the returned for the aforementioned API call.
 
+**Technical constraints:**
+
+- Please don't use a UI library such as React Native Paper. We'd like to see you roll your own components.
+  - Though frameworks such as Styled Components are fine to use.
+
 ## Task List
 
 - [ ] **Display a simple loading indicator** whilst the data is being loaded
