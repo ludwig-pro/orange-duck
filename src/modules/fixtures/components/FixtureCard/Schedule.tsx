@@ -4,12 +4,13 @@ import { Fixture } from '../../../../core/api/models';
 import { View, Text, StyleSheet } from 'react-native';
 import { Spacer } from '../../../../components/Spacer';
 
-import { spacing } from '../../../../core/theme';
+import { radii, spacing } from '../../../../core/theme';
 import { formatDate } from '../../../../core/date';
 
 export const Schedule = ({ dateTime }: Pick<Fixture, 'dateTime'>) => {
   return (
     <View style={styles.container}>
+      <Spacer size="10" />
       <Text style={styles.date} numberOfLines={2}>
         {formatDate({ date: dateTime, format: 'MEDIUM_EN' })}
       </Text>
@@ -25,8 +26,7 @@ export const Schedule = ({ dateTime }: Pick<Fixture, 'dateTime'>) => {
 
 const styles = StyleSheet.create({
   container: {
-    flexBasis: '30%',
-    justifyContent: 'center'
+    flexBasis: '30%'
   },
   date: {
     color: '#0c0c0c',
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   timeContainer: {
     backgroundColor: '#373636',
-    borderRadius: 10,
+    borderRadius: radii.regular,
     padding: spacing['10'],
     justifyContent: 'center',
     alignItems: 'center'

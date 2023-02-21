@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import { Spacer } from '../../../components/Spacer';
+import { spacing } from '../../../core/theme';
 import { FixtureCard } from '../components/FixtureCard';
 import { useFixtures } from '../hooks/useFixtures';
 
@@ -13,13 +15,17 @@ const FixturesScreen = () => {
 
   return (
     <View style={styles.container}>
-      {canDisplayFixture && <FixtureCard {...fixture} />}
+      {canDisplayFixture && <FixtureCard {...fixtures[0]} />}
+      <Spacer size="10" />
+      {canDisplayFixture && <FixtureCard {...fixtures[1]} />}
+      <Spacer size="10" />
+      {canDisplayFixture && <FixtureCard {...fixtures[2]} />}
     </View>
   );
 };
 
 export const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16 }
+  container: { flex: 1, padding: spacing['15'] }
 });
 
 export default FixturesScreen;

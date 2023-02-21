@@ -3,6 +3,9 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Schedule } from './Schedule';
 import { Club } from './Club';
 import { Fixture } from '../../../../core/api/models';
+import { radii, spacing } from '../../../../core/theme';
+
+const CARD_HEIGHT = 175;
 
 export const FixtureCard = ({
   awayClub,
@@ -26,9 +29,9 @@ export const FixtureCard = ({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#d8d8d8',
-    borderRadius: 10,
-    padding: 12,
-    height: 200,
+    borderRadius: radii.regular,
+    padding: spacing['10'],
+    height: CARD_HEIGHT,
     justifyContent: 'space-between'
   },
   content: {
