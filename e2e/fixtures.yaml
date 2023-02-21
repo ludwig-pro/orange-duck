@@ -1,0 +1,14 @@
+appId: com.exercisesreactnative
+---
+- launchApp:
+    appId: "com.exercisesreactnative"
+    clearState: true
+    clearKeychain: true   # optional: clear *entire* iOS keychain
+    stopApp: false
+- assertVisible: "Fixtures"
+- assertVisible:
+    id: "fixtures-list"
+- swipe:
+    direction: "UP"
+    duration: 200
+

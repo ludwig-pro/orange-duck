@@ -27,6 +27,7 @@ export const FixturesList = ({ isLoading, fixtures }: FixturesListProps) => {
 
   return (
     <FlatList
+      testID="fixtures-list"
       contentContainerStyle={{
         padding: spacing['15']
       }}
