@@ -1,5 +1,7 @@
 import styled from 'styled-components/native';
 
-export default styled.View`
+export const ScreenWrapper = styled.View`
   padding: 16px;
 `;
+
+export default ScreenWrapper;

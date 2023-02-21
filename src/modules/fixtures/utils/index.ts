@@ -1,0 +1,1 @@
+export { getSquareDiagonale } from './getSquareDiagonale';
