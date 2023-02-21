@@ -1,26 +1,16 @@
-import React, { useEffect } from 'react';
-import { Text } from 'react-native';
-import ScreenWrapper from '../../../components/ScreenWrapper';
-import { useStateSelector, useThunkDispatch } from '../../../core/redux/hooks';
-import { getFixturesAsync } from '../thunks';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { FixtureCard } from '../components/FixtureCard';
+import { useFixtures } from '../hooks/useFixtures';
 
-export default () => {
-  const fixturesLoading = useStateSelector(u => u.fixtures.fixturesLoading);
-  const fixtures = useStateSelector(u => u.fixtures.fixtures);
-  const dispatch = useThunkDispatch();
+const FixturesScreen = () => {
+  const { fixturesLoading, fixtures } = useFixtures();
 
-  useEffect(() => {
-    // When the screen first loads,
-    // we fetch all the fixtures from the API
-    dispatch(getFixturesAsync());
-  }, [dispatch]);
-
-  console.log('loading', fixturesLoading);
-  console.log('fixtures', fixtures);
-
-  return (
-    <ScreenWrapper>
-      <Text>This is the screen you'll work on</Text>
-    </ScreenWrapper>
-  );
+  return <View style={styles.container} />;
 };
+
+export const styles = StyleSheet.create({
+  container: { flex: 1, padding: 16 }
+});
+
+export default FixturesScreen;
