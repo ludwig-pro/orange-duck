@@ -11,4 +11,16 @@ appId: com.exercisesreactnative
 - swipe:
     direction: "UP"
     duration: 200
+- swipe:
+    direction: "UP"
+    duration: 200
+- swipe:
+    direction: "UP"
+    duration: 200
+- swipe:
+    direction: "UP"
+    duration: 200
+- swipe:
+    direction: "UP"
+    duration: 200
 

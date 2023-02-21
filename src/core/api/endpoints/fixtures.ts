@@ -1,10 +1,10 @@
 import { Fixture } from '../models';
-import { fixtureMocks } from './fixtures.mocks';
+import { performanceMocks } from './fixtures.mocks';
 
 export const get = (): Promise<Fixture[]> => {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve(fixtureMocks);
+      resolve(performanceMocks);
     }, 3000);
   });
 };

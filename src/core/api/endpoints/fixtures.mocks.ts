@@ -49,3 +49,16 @@ export const fixtureMocks: Fixture[] = [
     competition: competitionMocks[0]
   }
 ];
+
+const getRandomItem = (index: number) => {
+  const item = fixtureMocks[~~(Math.random() * fixtureMocks.length)];
+  return {
+    ...item,
+    dateTime: getFutureDateString(7 + index * 7),
+    id: index.toString()
+  };
+};
+
+export const performanceMocks: Fixture[] = Array.from(new Array(5000)).map(
+  (_, index) => getRandomItem(index)
+);
