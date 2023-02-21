@@ -1,7 +1,8 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
 import React from 'react';
-import { Club as ClubTypes } from '../../../../core/api/models';
+import { StyleSheet, Text, View } from 'react-native';
+import FastImage from 'react-native-fast-image';
 import { Spacer } from '../../../../components/Spacer';
+import { Club as ClubTypes } from '../../../../core/api/models';
 import { getSquareDiagonale } from '../../utils/getSquareDiagonale';
 
 const LOGO_WIDTH = 50;
@@ -11,7 +12,12 @@ export const Club = ({ logo, name }: ClubTypes) => {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-        <Image source={{ uri: logo }} style={styles.logo} />
+        <FastImage
+          style={styles.logo}
+          source={{
+            uri: logo
+          }}
+        />
       </View>
       <Spacer size="10" />
       <Text style={styles.text} numberOfLines={2}>
