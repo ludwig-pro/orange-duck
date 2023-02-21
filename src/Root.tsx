@@ -16,7 +16,7 @@ const Tab = createBottomTabNavigator<RootParamList>();
 
 export default () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator initialRouteName="Fixtures">
       <Tab.Screen
         name="Home"
         options={{ title: 'Stadion FC' }}
