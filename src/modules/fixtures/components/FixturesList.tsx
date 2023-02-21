@@ -4,6 +4,7 @@ import { Spacer } from '../../../components/Spacer';
 import { Fixture } from '../../../core/api/models';
 import { spacing } from '../../../core/theme';
 import { FixtureCard } from './FixtureCard';
+import { CARD_HEIGHT } from './FixtureCard/FixtureCard';
 
 type FixturesListProps = {
   isLoading: boolean;
@@ -27,6 +28,11 @@ export const FixturesList = ({ isLoading, fixtures }: FixturesListProps) => {
 
   return (
     <FlatList
+      getItemLayout={(_, index) => ({
+        index,
+        length: CARD_HEIGHT,
+        offset: CARD_HEIGHT * index
+      })}
       testID="fixtures-list"
       contentContainerStyle={{
         padding: spacing['15']

@@ -1,30 +1,26 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Schedule } from './Schedule';
 import { Club } from './Club';
 import { Fixture } from '../../../../core/api/models';
 import { radii, spacing } from '../../../../core/theme';
 
-const CARD_HEIGHT = 175;
+export const CARD_HEIGHT = 175;
 
-export const FixtureCard = ({
-  awayClub,
-  competition,
-  dateTime,
-  homeClub,
-  id
-}: Fixture) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>{competition.name}</Text>
-      <View style={styles.content}>
-        <Club {...homeClub} />
-        <Schedule dateTime={dateTime} />
-        <Club {...awayClub} />
+export const FixtureCard = memo(
+  ({ awayClub, competition, dateTime, homeClub, id }: Fixture) => {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>{competition.name}</Text>
+        <View style={styles.content}>
+          <Club {...homeClub} />
+          <Schedule dateTime={dateTime} />
+          <Club {...awayClub} />
+        </View>
       </View>
-    </View>
-  );
-};
+    );
+  }
+);
 
 const styles = StyleSheet.create({
   container: {
