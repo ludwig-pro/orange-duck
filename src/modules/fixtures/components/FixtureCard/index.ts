@@ -1,0 +1,1 @@
+export { FixtureCard } from './FixtureCard';

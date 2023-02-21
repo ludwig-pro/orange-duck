@@ -6,7 +6,16 @@ import { useFixtures } from '../hooks/useFixtures';
 const FixturesScreen = () => {
   const { fixturesLoading, fixtures } = useFixtures();
 
-  return <View style={styles.container} />;
+  const fixture = fixtures[0];
+  const isFetched = !fixturesLoading;
+  const hasFixture = fixture != null;
+  const canDisplayFixture = isFetched && hasFixture;
+
+  return (
+    <View style={styles.container}>
+      {canDisplayFixture && <FixtureCard {...fixture} />}
+    </View>
+  );
 };
 
 export const styles = StyleSheet.create({
