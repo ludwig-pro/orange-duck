@@ -5,17 +5,18 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Spacer } from '../../../../components/Spacer';
 
 import { spacing } from '../../../../core/theme';
+import { formatDate } from '../../../../core/date';
 
 export const Schedule = ({ dateTime }: Pick<Fixture, 'dateTime'>) => {
   return (
     <View style={styles.container}>
       <Text style={styles.date} numberOfLines={2}>
-        {dateTime}
+        {formatDate({ date: dateTime, format: 'MEDIUM_EN' })}
       </Text>
       <Spacer size="10" />
       <View style={styles.timeContainer}>
         <Text style={styles.time} numberOfLines={1}>
-          {dateTime}
+          {formatDate({ date: dateTime, format: 'TIME' })}
         </Text>
       </View>
     </View>

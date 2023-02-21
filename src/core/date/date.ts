@@ -7,7 +7,7 @@ dayjs.extend(utc);
 
 enum DateFormat {
   /** ex: 16:41 or 4:41 PM */
-  TIME = 'LT',
+  TIME = 'HH:mm',
   /** ex: Nov 25th, 1989 */
   MEDIUM_EN = 'ddd Do MMM'
 }
@@ -17,7 +17,7 @@ export const formatDate = ({
   format
 }: {
   date: string | number | dayjs.Dayjs | Date | null | undefined;
-  format: 'MEDIUM_EN';
+  format: keyof typeof DateFormat;
 }) => {
   const template = DateFormat[format];
 
