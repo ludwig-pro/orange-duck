@@ -1,5 +1,7 @@
+import { FlashList } from '@shopify/flash-list';
 import React, { useCallback } from 'react';
-import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
+
 import { Spacer } from '../../../components/Spacer';
 import { Fixture } from '../../../core/api/models';
 import { spacing } from '../../../core/theme';
@@ -27,12 +29,7 @@ export const FixturesList = ({ isLoading, fixtures }: FixturesListProps) => {
   }
 
   return (
-    <FlatList
-      getItemLayout={(_, index) => ({
-        index,
-        length: CARD_HEIGHT + spacing['10'],
-        offset: (CARD_HEIGHT + spacing['10']) * index
-      })}
+    <FlashList
       testID="fixtures-list"
       contentContainerStyle={styles.container}
       showsVerticalScrollIndicator={false}
@@ -40,6 +37,7 @@ export const FixturesList = ({ isLoading, fixtures }: FixturesListProps) => {
       keyExtractor={keyExtractor}
       renderItem={renderItem}
       ItemSeparatorComponent={() => <Spacer vertical size="10" />}
+      estimatedItemSize={CARD_HEIGHT + spacing['10']}
     />
   );
 };
