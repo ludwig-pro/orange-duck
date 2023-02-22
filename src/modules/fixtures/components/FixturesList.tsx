@@ -30,8 +30,8 @@ export const FixturesList = ({ isLoading, fixtures }: FixturesListProps) => {
     <FlatList
       getItemLayout={(_, index) => ({
         index,
-        length: CARD_HEIGHT,
-        offset: CARD_HEIGHT * index
+        length: CARD_HEIGHT + spacing['10'],
+        offset: (CARD_HEIGHT + spacing['10']) * index
       })}
       testID="fixtures-list"
       contentContainerStyle={styles.container}
