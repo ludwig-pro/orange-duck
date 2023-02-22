@@ -34,9 +34,7 @@ export const FixturesList = ({ isLoading, fixtures }: FixturesListProps) => {
         offset: CARD_HEIGHT * index
       })}
       testID="fixtures-list"
-      contentContainerStyle={{
-        padding: spacing['15']
-      }}
+      contentContainerStyle={styles.container}
       showsVerticalScrollIndicator={false}
       data={fixtures}
       keyExtractor={keyExtractor}
@@ -47,7 +45,7 @@ export const FixturesList = ({ isLoading, fixtures }: FixturesListProps) => {
 };
 
 export const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16 },
+  container: { padding: spacing['15'] },
   loaderContainer: {
     flex: 1,
     justifyContent: 'center',
