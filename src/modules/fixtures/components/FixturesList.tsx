@@ -12,7 +12,7 @@ type FixturesListProps = {
 };
 
 export const FixturesList = ({ isLoading, fixtures }: FixturesListProps) => {
-  const keyExtractor = useCallback(({ id, name }) => id.toString() + name, []);
+  const keyExtractor = useCallback(({ id }: Fixture) => id.toString(), []);
   const renderItem = useCallback(
     ({ item }: { item: Fixture }) => <FixtureCard {...item} />,
     []
